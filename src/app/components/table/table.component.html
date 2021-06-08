@@ -1,0 +1,17 @@
+<p>{{title}} :</p>
+<table>
+    <tr>
+        <th *ngFor="let key of keys">{{key}}</th>
+    </tr>
+    <tr>
+        <td *ngFor="let key of keys;let i = index">
+            <span *ngIf="arrayExist(newData[i][key]);else elseBlock">
+                <button class="btn" (click)="createComponent(newData[i][key], key)">Click Me &nbsp;<i
+                        class="fa fa-caret-square-o-down fa-lg"></i></button>
+            </span>
+            <ng-template #elseBlock>
+                <span>{{newData[i][key]}}</span>
+            </ng-template>
+        </td>
+    </tr>
+</table>

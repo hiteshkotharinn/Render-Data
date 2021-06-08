@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html, body {
+        background-color: #282A35;
+        color: #ffffff;
+        font-family: Verdana,sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+        padding: 1rem;
+}

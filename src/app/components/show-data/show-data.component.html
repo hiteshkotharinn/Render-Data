@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm">
+            <h2>Input</h2>
+            <hr>
+            <pre [innerHTML]="data | prettyprint"></pre>
+        </div>
+        <div class="col-sm">
+            <h2>Output</h2>
+            <hr>
+            <span *ngFor="let i of newData;let ind = index">
+                <div *ngIf="arrayExist(i[keys[ind]]);else elseBlock">
+                    <app-table [title]="keys[ind]" [data]="i[keys[ind]]"></app-table>
+                </div>
+                <ng-template #elseBlock>
+                    <p>{{keys[ind]}} : {{i[keys[ind]]}}</p>
+                </ng-template>
+
+            </span>
+            <ng-template #container></ng-template>
+        </div>
+    </div>
+</div>

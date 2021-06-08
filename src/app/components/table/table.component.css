@@ -1,0 +1,28 @@
+p {
+	margin-top: 15px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td,
+th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #04AA6D;
+}
+
+button {
+	color: #ffffff;
+}
+
+button:hover {
+	color: #ddd;
+}
